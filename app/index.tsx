@@ -1,8 +1,9 @@
 import React from 'react';
-import { StatusBar } from 'react-native';
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, ImageBackground } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 import { useLayoutEffect } from 'react';
+
+import CarItem from '../components/CarItem';
 
 
 
@@ -17,12 +18,7 @@ export default function Index() {
   return (
     
     <View style={styles.container}>
-      <View style={styles.carContainer}>
-        <View style={styles.titles}>
-          <Text style={styles.title}>Model S</Text>
-          <Text style={styles.subtitle}>Starting at $69,420</Text>
-        </View>
-      </View>
+      <CarItem />
 
       
     </View>
@@ -35,21 +31,5 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  carContainer: {
-    width: '100%',
-    height: '100%',
-  },
-  titles: {
-    marginTop: '30%',
-    width: '100%',
-    alignItems: 'center',
-  },
-  title: {
-    fontSize: 40,
-    fontWeight: '500',
-  },
-  subtitle: {
-    fontSize: 16,
-    color: '#5c5e62',
-  },
+  
 })
