@@ -2,10 +2,8 @@ import React from 'react';
 import { Text, View, StyleSheet, ImageBackground } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 import { useLayoutEffect } from 'react';
-
-import CarItem from '../components/CarItem';
-
-
+import CarsList from '../components/CarsList';
+import Header from '../components/Header';
 
 export default function Index() {
   
@@ -18,12 +16,8 @@ export default function Index() {
   return (
     
     <View style={styles.container}>
-      <CarItem 
-        name={'Model S'} 
-        tagline={'Order Online For'} 
-        taglineCTA={'Touchless Delivery'}
-        image={require('../assets/images/ModelS.jpeg')} />
-
+     <Header /> 
+    <CarsList />
       
     </View>
   );

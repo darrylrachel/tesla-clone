@@ -3,9 +3,9 @@ import { View, Text, ImageBackground } from 'react-native';
 import StyledButton from '../StyledButton';
 import styles from './styles';
 
-const carItem = (props) => {
+const CarItem = (props) => {
 
-  const { name, tagline, taglineCTA, image } = props;
+  const { name, tagline, taglineCTA, image } = props.car;
 
   return (
     <View style={styles.carContainer}>
@@ -41,4 +41,4 @@ const carItem = (props) => {
   );
 };
 
-export default carItem;
+export default CarItem;
